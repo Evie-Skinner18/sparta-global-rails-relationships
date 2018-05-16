@@ -5,6 +5,8 @@ class PreferencesController < ApplicationController
   # GET /preferences.json
   def index
     @preferences = Preference.all
+    @cheeses = Cheese.all
+    @users = User.all
   end
 
   # GET /preferences/1
@@ -15,10 +17,16 @@ class PreferencesController < ApplicationController
   # GET /preferences/new
   def new
     @preference = Preference.new
+    @cheeses = Cheese.all
+    @users = User.all
+
   end
 
   # GET /preferences/1/edit
   def edit
+    @cheeses = Cheese.all
+    @users = User.all
+
   end
 
   # POST /preferences

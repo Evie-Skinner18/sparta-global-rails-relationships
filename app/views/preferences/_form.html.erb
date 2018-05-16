@@ -13,12 +13,16 @@
 
   <div class="field">
     <%= form.label :user %>
-    <%= form.text_field :user %>
+    <!-- Making a drop down list of all the available Users and embedding it in the form -->
+    <%= collection_select(:preference, :user_id, @users, :id, :name) %>
+
   </div>
 
   <div class="field">
     <%= form.label :cheeses %>
-    <%= form.text_field :cheeses %>
+    <!-- Making a drop down list of all the available cheeses and embedding it in the form -->
+    <%= collection_select(:preference, :cheese_id, @cheeses, :id, :name) %>
+
   </div>
 
   <div class="field">
